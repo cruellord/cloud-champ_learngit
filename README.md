@@ -53,6 +53,25 @@ after writing new file in vscode's explorer pane, where all open editors and fil
 the steps to push - status> add> commit > push.
 
 to commit directly by skipping the staging area,[git commit -a -m "new_commit"]
+to commit without adding- git commit -am "commit_message"
+(-am flag= automatic)
+
+to create custom commands/alliases=
+git config --global alias.ac "commit -am" == git commit -am == git ac "commit_message"
+
+to correct the typo made in last commit's message =  git commit  --amend -m "correct_commit_message"
+
+
+git stash save [save_name] , to stash and store it for later with a name
+
+git stash list , to list all the saved stash name
+
+git stash apply[list_index] , to pop the stash
+
+
+
+
+
 
 
 ------------
@@ -72,6 +91,8 @@ to shift branch, "git checkout [branch_name or commit_hash]
 
 to make a new branch and shift to it,-
 "git checkout -b [branch_name]
+
+go to previously used branch, "git checkout -"
 
 to delete a branch, "git branch -d "branch_name"
 to list all local and remote branch, "git branch -a"
@@ -111,6 +132,21 @@ then click on "merge pull request" and "confirm merge", or from command line usi
 now to clone into another device, "git clone [repository_url]
 which asks for password if the remote repo is pvt.
 
+git tags are human readable mutable commits for easier checkouts
+
+
+BEST PRACTICE-
+clean commit history-don't commit the whole code all at once, commit each funcionality, frequently, for better tracking
+
+for better readablity of git log, git log --graph --oneline
+
+to rename the master branch to custom name= git branch -M [name]
+
+
+
+reverting- git reset --hard [commit_hash], deletes the leatest commits
+
+git revert [commit_hash], makes a new commit by undoing the changes in the perticular commit.
 
 
 
@@ -122,4 +158,14 @@ which asks for password if the remote repo is pvt.
 
 
 # learning_git
+
+to work with exiaasting project, we create a copy of the project in our own account(remote repo), by forking, click on fork and select your account
+
+any folder that starts with your own account, it's name starts with origin
+
+from where you have forked the project is called "upstream"
+to add the upstream repo, "git remote add upstream [url]"
+
+
+to make a copy of origin in local repo, clone it, "git clone [url]
 
