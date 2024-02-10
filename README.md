@@ -10,6 +10,11 @@ git branch -M main
 git remote add origin https://github.com/cruellord/cloud-champ_learngit.git
 git push -u origin main
 
+…or push an existing repository from the command line
+git remote add origin https://github.com/cruellord/cloud-champ_learngit.git
+git branch -M main
+git push -u origin main
+
 "
 first make a seperate folder(mkdir) for the project.
 
@@ -37,7 +42,77 @@ to conncet to remote repo, "git remote add origin [remote_repository)_url]"
 
 rechecking if connected ot remote repo, "git remote -v" it returns urls to remote repo.
 
-retrying to push again, 
+after adding the modified file to stage again and commiting again,retrying to push again, it is successful, git push -u origin master
+
+---------------------
+
+now making a second version and adding new file "app.py"
+
+after writing new file in vscode's explorer pane, where all open editors and files and folders are listed, next to new untracted file there is a U symbol which suggest that file is untracted by git.
+
+the steps to push - status> add> commit > push.
+
+to commit directly by skipping the staging area,[git commit -a -m "new_commit"]
+
+
+------------
+
+then we change the app.py to third version.
+
+after modifing the file the U for untracked symbol changes to M for modified, 
+
+status> add> commit > push.
+----------------------
+
+in the github page we see all commits in commits tab with commit message,on clicking each addition or modification we can see what changes have been made.
+
+making a new branch, git branch [brach_name], this only creates a new branch, dosen't uses that branch automatically.
+
+to shift branch, "git checkout [branch_name or commit_hash]
+
+to make a new branch and shift to it,-
+"git checkout -b [branch_name]
+
+to delete a branch, "git branch -d "branch_name"
+to list all local and remote branch, "git branch -a"
+to list only remote branch, "git branch -r"
+
+
+git origin add [url]
+
+pull is a combination of fetch and merge
+
+Get all the change history of the origin for this branch:git fetch origin
+
+git merge origin/master- to merge current origin to master branch
+
+Update the current branch from its origin using a single command:git pull origin
+
+push current to default remote origin- git push origin
+
+to rename origin remote to upstream: git remote rename origin upstream
+
+
+
+
+then upon hitting "git branch" it gives all the existing branch name, ad a * infront of the currently used branch.
+
+unless you push something form the newly created branch, it doesn't reflect the new branch name in the github
+
+
+
+PULL REQUEST - it is a way to propose changes to a repo by submitting them for review and eventually merging into the main/master branch . it facilitates code review and ensures control in software dev workflow.
+
+now to add the changes of different to the master branch, in github
+, click "compare and pull requests" in the code tab, write the pull comment to be read by the master to request merging and review, then click "create pull request" and the changes are mentioned below,
+
+then click on "merge pull request" and "confirm merge", or from command line using git merge 
+
+now to clone into another device, "git clone [repository_url]
+which asks for password if the remote repo is pvt.
+
+
+
 
 
 
