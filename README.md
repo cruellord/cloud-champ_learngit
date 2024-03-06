@@ -10,6 +10,11 @@ git branch -M main
 git remote add origin https://github.com/cruellord/cloud-champ_learngit.git
 git push -u origin main
 
+…or push an existing repository from the command line
+git remote add origin https://github.com/cruellord/cloud-champ_learngit.git
+git branch -M main
+git push -u origin main
+
 "
 first make a seperate folder(mkdir) for the project.
 
@@ -154,6 +159,16 @@ modification
 
 
 # learning_git
+
+to work with exiaasting project, we create a copy of the project in our own account(remote repo), by forking, click on fork and select your account
+
+any folder that starts with your own account, it's name starts with origin
+
+from where you have forked the project is called "upstream"
+to add the upstream repo, "git remote add upstream [url]"
+
+
+to make a copy of origin in local repo, clone it, "git clone [url]
 
 to work with exiaasting project, we create a copy of the project in our own account(remote repo), by forking, click on fork and select your account
 
